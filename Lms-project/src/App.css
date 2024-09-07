@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navb-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-left: 0;
+  padding-left: 50px;
+}
+
+.navbar {
+  padding-left: 0;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu-icon-wrapper {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-icon {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  border: none;
+}
+
+.sidebar-wrapper {
+  height: 100vh;
+}
+
+.slide {
+  height: 100%;
+  width: 250px;
+  background-color: #8E1DFF;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  transition: transform 0.5s ease;
+  box-shadow: 8px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.slide.open {
+  transform: translateX(0);
+}
+
+.slide.closed {
+  transform: translateX(-250px);
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+  border-bottom: 2px solid #d8cde2;
+}
+
+.sidebar-links a:hover {
+  background-color: #5A0FB7;
+  color: #ffffff;
+}
+
+.expand-icon {
+  font-size: 20px;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.logout-icon:hover,
+.menu-icon:hover {
+  color: #5A0FB7;
+}
+
+.sub-options {
+  padding-left: 30px;
+}
+
+.sub-options a {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.sub-options a:hover {
+  background-color: #5A0FB7;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    transform: translateX(-250px);
+    position: fixed;
+    top: 54px;
+  }
+
+  .slide.open {
+    transform: translateX(0);
+  }
+
+  .logout-icon {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 440px) {
+  .navb-text {
+    font-size: 14px;
+  }
+  .slide {
+    position: fixed;
+    top: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navb-text {
+    font-size: 14px;
+  }
+  .slide {
+    position: fixed;
+    top: 54px;
+  }
+}
+
+@media (max-width: 330px) {
+  .navb-text {
+    font-size: 14px;
+  }
+  .slide {
+    position: fixed;
+    top: 56px;
+  }
+}
+
+@media (max-width: 265px) {
+  .navb-text {
+    font-size: 12px;
+  }
+  .slide {
+    margin-top: 5px;
+  }
+  .logout-icon {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  .sidebar-links a {
+    font-size: 18px;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  margin-top: 80px;
+  width: 100%;
+}
